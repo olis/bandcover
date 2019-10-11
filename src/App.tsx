@@ -47,6 +47,11 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
+      <footer className="page-footer text-muted bg-light">
+        <div className="footer-copyright pt-4 pl-4">
+          <p>(C) 2019 Oliver Schemmel</p>
+        </div>
+      </footer>
     </div>
   );
 };
