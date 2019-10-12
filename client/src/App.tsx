@@ -4,19 +4,17 @@ import "./App.css";
 import Song from "./domain/Song";
 import SongList from "./components/SongList";
 
-const fetchSongs = async () => {
-  const response = await fetch("http://localhost:8080/songs");
-  const json = await response.json();
-
-  return Array.of(json);
-};
-
 const App: React.FC = () => {
   const [songList, setSongList] = useState<Song[]>([]);
 
   useEffect(() => {
-    fetchSongs().then(songs => setSongList(() => songs));
-  });
+    fetch("http://localhost:8080/songs").then(response => {
+      response.json().then(json => {
+        console.log("useEffect");
+        setSongList(json);
+      });
+    });
+  }, []);
 
   return (
     <div className="App">
