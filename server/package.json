@@ -20,5 +20,19 @@
     "@types/node": "^12.7.12",
     "tslint": "^5.20.0",
     "typescript": "^3.6.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "index.ts",
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
   }
 }
