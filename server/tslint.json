@@ -4,6 +4,7 @@
   "jsRules": {},
   "rules": {
     "trailing-comma": [false],
+    "ordered-imports": false,
     "object-literal-sort-keys": {
       "options": "match-declaration-order"
     },

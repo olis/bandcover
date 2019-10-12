@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 
 interface Song {
   id: string;
@@ -54,6 +55,8 @@ const songs: Song[] = [
 ];
 
 const app = express();
+app.use(cors());
+// app.options("*", cors());
 const port = 8080;
 
 app.get("/", (req, res) => res.send("Hello World"));

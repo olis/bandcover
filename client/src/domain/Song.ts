@@ -1,4 +1,4 @@
-export interface Song {
+export default interface Song {
   id: string;
   title: string;
   artist: string;
