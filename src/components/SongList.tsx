@@ -21,7 +21,13 @@ const MessageList: React.FunctionComponent<Props> = ({ songs }) => {
             <li className="list-group-item">BPM: {song.bpm}</li>
           </ul>
           <div className="card-body">
-            <p className="card-text">{song.snippet}</p>
+            <p>
+              <span
+                className="card-text"
+                dangerouslySetInnerHTML={{ __html: song.snippet || "" }}
+              ></span>{" "}
+              ..."
+            </p>
           </div>
         </div>
       </div>
