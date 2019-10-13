@@ -23,7 +23,7 @@ const MessageList: React.FunctionComponent<Props> = ({ songs }) => {
           <div className="card-body">
             <p>
               "<span
-                className="card-text"
+                className="card-text font-italic"
                 dangerouslySetInnerHTML={{ __html: song.snippet || "" }}
               ></span>{" "}
               ..." (<a href="http://en.wikipedia.org" target="blank">Wikipedia</a>)
