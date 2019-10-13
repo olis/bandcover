@@ -8,7 +8,7 @@ const App: React.FC = () => {
   const [songList, setSongList] = useState<Song[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/songs").then(response => {
+    fetch("https://songcover-backend.herokuapp.com/songs").then(response => {
       response.json().then(json => {
         console.log("useEffect");
         setSongList(json);
