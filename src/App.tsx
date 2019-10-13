@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
+import Backend from "./domain/Backend";
 import Song from "./domain/Song";
 import SongList from "./components/SongList";
 
@@ -8,7 +9,7 @@ const App: React.FC = () => {
   const [songList, setSongList] = useState<Song[]>([]);
 
   useEffect(() => {
-    fetch("https://songcover-backend.herokuapp.com/songs").then(response => {
+    fetch(`${Backend.getURL()}/songs`).then(response => {
       response.json().then(json => {
         console.log("useEffect");
         setSongList(json);
