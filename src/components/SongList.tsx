@@ -21,12 +21,7 @@ const MessageList: React.FunctionComponent<Props> = ({ songs }) => {
             <li className="list-group-item">BPM: {song.bpm}</li>
           </ul>
           <div className="card-body">
-            <p className="card-text">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque
-              nesciunt iusto pariatur assumenda, suscipit repellat molestias,
-              quasi porro distinctio voluptatum impedit repellendus fugiat vel!
-              Cumque libero odit quo dolorum laborum!
-            </p>
+            <p className="card-text">{song.snippet}</p>
           </div>
         </div>
       </div>
