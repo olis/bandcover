@@ -11,7 +11,6 @@ const App: React.FC = () => {
   useEffect(() => {
     fetch(`${Backend.getURL()}/songs`).then(response => {
       response.json().then(json => {
-        console.log("useEffect");
         setSongList(json);
       });
     });
