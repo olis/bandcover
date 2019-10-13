@@ -16,9 +16,9 @@ const MessageList: React.FunctionComponent<Props> = ({ songs }) => {
           </div>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">
-              Key: <span>C#</span>
+              Key: <span>{song.key}</span>
             </li>
-            <li className="list-group-item">BPM: 120</li>
+            <li className="list-group-item">BPM: {song.bpm}</li>
           </ul>
           <div className="card-body">
             <p className="card-text">
