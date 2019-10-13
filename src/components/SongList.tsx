@@ -22,11 +22,16 @@ const MessageList: React.FunctionComponent<Props> = ({ songs }) => {
           </ul>
           <div className="card-body">
             <p>
-              "<span
+              '
+              <span
                 className="card-text font-italic"
                 dangerouslySetInnerHTML={{ __html: song.snippet || "" }}
               ></span>{" "}
-              ..." (<a href="http://en.wikipedia.org" target="blank">Wikipedia</a>)
+              ...' (
+              <a href="http://en.wikipedia.org" target="blank">
+                Wikipedia
+              </a>
+              )
             </p>
           </div>
         </div>
