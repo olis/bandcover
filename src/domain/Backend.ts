@@ -1,9 +1,9 @@
 const Backend = {
   getURL: () => {
-    if (process.env.NODE_ENV && process.env.NODE_ENV === "development") {
-      return "http://localhost:5000";
+    if (process.env && process.env.BACKEND_URL) {
+      return process.env.BACKEND_URL;
     } else {
-      return "https://songcover-backend.herokuapp.com";
+      return "http://localhost:5000";
     }
   }
 };
